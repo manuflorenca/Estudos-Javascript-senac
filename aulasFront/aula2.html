@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada e Saida de dados</title>
+</head>
+<body>
+
+    <h1 id="texto" >Meu Texto</h1>
+
+    <script>
+        //prompt abre uum modal para pegar conteudos
+        var valor=prompt("Digite um valor: ");
+        //pega pelo id
+        var texto=document.getElementById("texto");
+
+        // vai permitir inserir valores de texto no meu elemento
+        texto.innerText=valor;
+        console.log(valor)
+        alert(valor)
+        document.write(valor)
+        
+    </script>
+    
+</body>
+</html>

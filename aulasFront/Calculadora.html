@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <div>
+        <input id="valor1" type="text" placeholder="valor1">
+        <input id="valor2" type="text" placeholder="valor2">
+        <h3>=</h3>
+        <input id="resposta" type="text" disabled>
+    </div>
+
+    <div>
+        <button id="btn_mais" >+</button>
+        <button id="btn_menos">-</button>
+        <button id="btn_vezes">x</button>
+        <button id="btn_dividir">/</button>
+    </div>
+
+    <script>
+        const btnCalcular=document.getElementById("btnCalcular");
+        const t_field_valor1=document.getElementById("valor1");
+        const t_field_valor2=document.getElementById("valor2");
+        const t_field_resposta=document.querySelector("#resposta");
+
+        btn_mais.addEventListener("click",(e)=>{
+            
+            var soma=parseFloat(t_field_valor1.value) + parseFloat(t_field_valor2.value);
+            t_field_resposta.value=soma;
+
+        })
+
+        btn_menos.addEventListener("click",(e)=>{
+            
+            var menos=parseFloat(t_field_valor1.value) - parseFloat(t_field_valor2.value);
+            t_field_resposta.value=menos;
+
+        })
+
+        btn_vezes.addEventListener("click",(e)=>{
+            
+            var vezes=parseFloat(t_field_valor1.value) * parseFloat(t_field_valor2.value);
+            t_field_resposta.value=vezes;
+
+        })
+
+        btn_dividir.addEventListener("click",(e)=>{
+            
+            var dividir=parseFloat(t_field_valor1.value) / parseFloat(t_field_valor2.value);
+            t_field_resposta.value=dividir;
+
+        })
+
+    </script>
+
+
+    
+</body>
+</html>

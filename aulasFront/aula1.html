@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn_ligar" >acender</button>
+
+    <img src="assets/lampada_desligada.gif" alt="lampada desligada">
+
+    <button id="btn_desligar" >apagar</button>
+
+    <script>
+        var lampada=document.querySelector('img')
+        var btn_ligar=document.querySelector("#btn_ligar")
+        var btn_desligar=document.querySelector("#btn_desligar")
+
+        function ligarLampada(e){
+            lampada.src="assets/lampada_ligada.gif"
+        }
+
+        function desligarLampada(e){
+            lampada.src="assets/lampada_desligada.gif"
+        }
+
+        btn_ligar.addEventListener("click",ligarLampada)
+        btn_desligar.addEventListener("click",desligarLampada)
+
+    </script>
+
+</script>
+    
+</body>
+</html>

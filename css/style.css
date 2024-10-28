@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: #4ab0d9;
+}
+
+.corpo {
+    height: 85vh;
+}
+
+.footer {
+    height: 10vh;
+}
+
+.btn{
+    background-color: #4AA2D9;
+    color: #ffffff;
+}
+.btn:hover{
+    background-color: #0367A6;
+    color: #ffffff;
+}
+

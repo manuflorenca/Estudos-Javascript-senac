@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero e caluculos</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #btnCalcular{
+            width: 200px;
+            margin-right: 20px ;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="btnCalcular">Calcular</button>
+    <input id="valor1" type="text" placeholder="valor1">
+    <h1>X</h1>
+    <input id="valor2" type="text" placeholder="valor1">
+    <h1>=</h1>
+    <input id="resposta" type="text" disabled>
+
+    <script>
+        const btnCalcular=document.getElementById("btnCalcular");
+        const t_field_valor1=document.getElementById("valor1");
+        const t_field_valor2=document.getElementById("valor2");
+        const t_field_resposta=document.querySelector("#resposta");
+
+        btnCalcular.addEventListener("click",(e)=>{
+            var soma=parseFloat(t_field_valor1.value) + parseFloat(t_field_valor2.value);
+            t_field_resposta.value=soma;
+
+
+        })
+
+    </script>
+    
+</body>
+</html>
