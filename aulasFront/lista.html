@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="/css/listaCss.css">
+</head>
+
+<body>
+
+    <div id="container" >
+
+      <h1>Aulas</h1>
+
+      <div class="input_aulas">
+
+        <input id="t_field_aulas" type="text" placeholder="Aulas">
+        <button id="btn_add_aula">Adicionar</button>
+
+      </div>
+
+      <ul id="aulas">
+
+      </ul>
+
+    </div>
+
+    <script>
+
+        var aulas=document.getElementById("aulas");
+        const btn_add_aula=document.getElementById("btn_add_aula");
+        const t_field_aulas=document.getElementById("t_field_aulas")
+
+        var lista=["html","css"];
+
+        function chamarAulas(){
+            aulas.innerHTML=""
+            for(var i=0;i<lista.length; i++){
+        
+            aulas.innerHTML+=`<li class="lista"> ${lista [i]}</li>` 
+            }
+        }
+        
+        btn_add_aula.addEventListener("click",e=>{
+            lista.push(t_field_aulas.value)
+            chamarAulas()
+        })
+    </script>
+    
+</body>
+</html>

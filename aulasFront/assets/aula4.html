@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+ 
+    <style>
+        body{
+            box-sizing: border-box;
+            width: 100vw;
+            padding: 0;
+            margin: 0;
+        }
+ 
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(230, 227, 227);
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px;
+ 
+        }
+        ul{
+            list-style: none;
+        }
+        .tarefa{
+ 
+            padding-bottom: 15px;
+        }
+ 
+    </style>
+ 
+</head>
+<body>
+ 
+ 
+    <div id="container">
+        <h1>Add tarefas</h1>
+        <div class="input_tarefa">
+            <input id="t_field_tarefa" type="text" placeholder="tarefa">
+            <button id="btn_add">ADD</button>
+        </div>
+        <ul id="lista">
+           
+        </ul>
+    </div>
+ 
+    <script>
+ 
+    var lista=document.querySelector("#lista");
+    const btn_add=document.querySelector("#btn_add");
+    const t_field_tarefa=document.querySelector("#t_field_tarefa")
+ 
+    // Lista
+    var tarefas=["Estudar java","Ver one Piece", "Tocar Guitarra", "Desenhar","Ver one Piece"];
+   
+    function chamarTarefas(){
+        lista.innerHTML=""
+        for(var i=0;i< tarefas.length; i++){
+ 
+        // A cada rodada ele add um novo li com uma tarefa ela vai ser uma string
+        lista.innerHTML+=`<li class="tarefa">${tarefas[i]}</li>`
+ 
+        }
+    }
+   
+    // Comando para inserir dados do tipo html em um
+    // Ele vai ler Strings e vai converter para html
+   
+    btn_add.addEventListener("click",e=>{
+        tarefas.push(t_field_tarefa.value)
+       
+        chamarTarefas()
+    })
+ 
+    </script>
+   
+</body>
+</html>
