@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #btnCalcular{
+            width: 200px;
+            margin-right: 20px ;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Calcular media</h1>
+
+    <button id="btnCalcular">Calcular media</button>
+    <input id="media1" type="text" placeholder="media1">
+    <input id="media2" type="text" placeholder="media2">
+    <input id="media3" type="text" placeholder="media3">
+    <input id="media4" type="text" placeholder="media4">
+    <h1>=</h1>
+    <input id="resposta" type="text" disabled>
+
+    <script>
+        const btnCalcular=document.getElementById("btnCalcular");
+        const t_field_media1=document.getElementById("media1");
+        const t_field_media2=document.getElementById("media2");
+        const t_field_media3=document.getElementById("media3");
+        const t_field_media4=document.getElementById("media4");
+        const t_field_respostaSoma=document.querySelector;
+        const t_field_respostaDivisao=document.querySelector
+        ("#resposta");
+
+        btnCalcular.addEventListener("click",(e)=>{
+            var soma=parseFloat(t_field_media1.value) + parseFloat(t_field_media2.value) + parseFloat(t_field_media3.value) + parseFloat(t_field_media4.value);
+            t_field_respostaSoma.value=soma;
+
+            var divisao=parseFloat(t_field_respostaSoma.value) / 4;
+            t_field_respostaDivisao.value=divisao;
+
+            // alert(t_field_respostaDivisao)
+
+        })
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

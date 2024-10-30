@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="idade" type="text">
+    <button>Verificar</button>
+    <h1 id="resposta" ></h1>
+
+    <script>
+        var idade = document.querySelector("#idade");
+        var btnVerificar = document.querySelector("button");
+        var resposta = document.querySelector("#resposta");
+
+        function responder(e){
+            if(idade.value>18 && idade.value<70 ) {
+                resposta.innerText= "Você deve votar"
+            }
+            else{
+                resposta.innerText="Você não pode votar"
+            }
+        }
+
+        btnVerificar.addEventListener("click",responder)
+    </script>
+    
+</body>
+</html>
